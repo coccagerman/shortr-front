@@ -8,3 +8,72 @@
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #000716;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #101826;
+  height: 85.4vh;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container label {
+  color: white;
+  font-size: 2rem;
+}
+
+.input-container input {
+  width: 50rem;
+  height: 3rem;
+  border-radius: .25rem;
+  font-size: 2rem;
+  padding: .25;
+  margin: 1rem 0;
+}
+
+button {
+  border-radius: .25rem;
+  border: 2px solid black;
+  color: black;
+  font-size: 2rem;
+  padding: .25;
+  margin-top: 2rem;
+  width: 15rem;
+  height: 4rem;
+  align-self: center;
+}
+
+.workingBtn {
+  background-color: #ffb703;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.workingBtn:hover {
+  background-color: #ffc42d;
+}
+
+.disabledBtn {
+  background-color: gray;
+}
+
+.result {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
