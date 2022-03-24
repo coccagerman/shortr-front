@@ -7,7 +7,6 @@ import logo from '../assets/logo.png'
 import validateUrl from '../assets/validateUrl'
 import ErrorMsg from './ErrorMsg'
 
-
 const Home:React.FC = () => {
 
   const [urlToShorten, setUrlToShorten] = useState<string>('')
