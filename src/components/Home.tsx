@@ -5,6 +5,8 @@ import axios from 'axios'
 
 import logo from '../assets/logo.png'
 import validateUrl from '../assets/validateUrl'
+import ErrorMsg from './ErrorMsg'
+
 
 const Home:React.FC = () => {
 
@@ -33,7 +35,7 @@ const Home:React.FC = () => {
   return (
     <section className='App'>
             {requestError ?
-                <h1>An error happened</h1>
+                <ErrorMsg/>
             :
                 <>
                     <Header>
