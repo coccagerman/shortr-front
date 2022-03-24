@@ -15,7 +15,6 @@ const ErrorContainer = styled.header`
   display: flex;
   justify-content: center;
   color: white;
-  font-size: 2rem;
   width: 100vw;
   height: 100vh;
   background-image: url(${error});
@@ -24,4 +23,11 @@ const ErrorContainer = styled.header`
 
 const ErrorTxt = styled.h1`  
   margin-top: 10%;
+  font-size: 4rem;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 10%;
+    margin-left: 5%;
+    font-size: 2.5rem;
+  }
 `;

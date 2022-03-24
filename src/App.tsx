@@ -1,9 +1,6 @@
 import './App.css'
-
-import { Suspense, lazy } from 'react'
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
+import { Suspense, lazy } from 'react'
 import ErrorBoundary from './ErrorBoundary'
 
 const Home = lazy(() => import ('./components/Home'))

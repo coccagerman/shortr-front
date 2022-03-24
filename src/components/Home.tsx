@@ -12,9 +12,6 @@ const Home:React.FC = () => {
   const [shortenedUrl, setShortenedUrl] = useState<string | null>(null)
   const [requestError, setRequestError] = useState<boolean>(false)
 
-  // TODO:
-  // - Mobile CSS
-
   const shortenUrl = () => {
       try {
           axios({
@@ -40,7 +37,7 @@ const Home:React.FC = () => {
             :
                 <>
                     <Header>
-                        <img src={logo} alt='Logo' />
+                        <Img src={logo} alt='Logo' />
                     </Header>
                 
                     <ContentContainer className='content'>
@@ -51,7 +48,7 @@ const Home:React.FC = () => {
                 
                         <Button className={validateUrl(urlToShorten) ? 'workingBtn' : 'disabledBtn'} disabled={!validateUrl(urlToShorten)} onClick={() => shortenUrl()}>Shorten URL</Button>
                 
-                        {shortenedUrl && <Result className='result'>Your shortened URL is: <a href={shortenedUrl} target='_blank' rel='noreferrer' >{shortenedUrl}</a></Result>}
+                        {shortenedUrl && <Result className='result'>Your shortened URL is: <ShortURL href={shortenedUrl} target='_blank' rel='noreferrer' >{shortenedUrl}</ShortURL></Result>}
                     </ContentContainer>
                 </>
             }
@@ -66,6 +63,13 @@ const Header = styled.header`
   align-items: center;
   width: 100%;
   background-color: #000716;
+  position: absolute;
+`;
+
+const Img = styled.img`  
+  @media screen and (max-width: 767px) {
+    width: 15rem;
+  }
 `;
 
 const ContentContainer = styled.div`  
@@ -73,7 +77,7 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   background-color: #101826;
-  height: 85.4vh;
+  height: 100vh;
 `;
 
 const InputContainer = styled.div`  
@@ -84,8 +88,13 @@ const InputContainer = styled.div`
 `;
 
 const Label = styled.label`  
-color: white;
-font-size: 2rem;
+  color: white;
+  font-size: 2rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `;
 
 const Input = styled.input`  
@@ -95,6 +104,11 @@ const Input = styled.input`
   font-size: 2rem;
   padding: .25;
   margin: 1rem 0;
+
+  @media screen and (max-width: 767px) {
+    width: 20rem;
+    font-size: 1.5rem;
+  }
 `;
 
 const Button = styled.button`  
@@ -117,5 +131,17 @@ const Result = styled.p`
   font-size: 2rem;
   text-align: center;
   margin-top: 3rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+  }
+`;
+
+const ShortURL = styled.a`  
+  color: white;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
 `;
 
