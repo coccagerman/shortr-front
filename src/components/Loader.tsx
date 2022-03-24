@@ -13,7 +13,7 @@ const Loader:React.FC = () => {
         try {
             axios({
                 method: 'get',
-                url: 'http://localhost:3030/' + params.urlid,
+                url: 'https://shortr-back.herokuapp.com/' + params.urlid,
             })
             .then(response => window.location = response.data)
             .catch(() => setRequestError(true))
