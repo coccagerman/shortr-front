@@ -1,4 +1,5 @@
 import React from 'react'
+import ErrorMsg from './components/ErrorMsg'
 
 export default class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
     constructor(props: any) {
@@ -15,7 +16,7 @@ export default class ErrorBoundary extends React.Component<{}, { hasError: boole
     }
   
     render() {
-        if (this.state.hasError) return <h1>Something went wrong, please refresh the page.</h1>
+        if (this.state.hasError) return <ErrorMsg/>
         return this.props.children
     }
 }
