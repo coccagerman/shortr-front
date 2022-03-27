@@ -17,7 +17,7 @@ const Home:React.FC = () => {
       try {
           axios({
             method: 'post',
-            url: 'https://shortr-back.herokuapp.com/',
+            url: 'http://localhost:3030/',
             data: {
               origurl: urlToShorten
             }
